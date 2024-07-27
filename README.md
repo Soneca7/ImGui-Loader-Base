@@ -1,4 +1,4 @@
-<a href="#"><img width="100%" height="auto" src="https://media.discordapp.net/attachments/1083158587746045953/1266755732372586558/png-transparent-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template-blue-removebg-preview.png?ex=66a64db5&is=66a4fc35&hm=142cecfcdf929a49749bf7af3b42171e82c0739fb1bdb7413fbd5900462b6107&=&format=webp&quality=lossless" height="175px"/></a>
+<a href="#"><img width="50%" height="auto" src="https://media.discordapp.net/attachments/1083158587746045953/1266755732372586558/png-transparent-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template-blue-removebg-preview.png?ex=66a64db5&is=66a4fc35&hm=142cecfcdf929a49749bf7af3b42171e82c0739fb1bdb7413fbd5900462b6107&=&format=webp&quality=lossless" height="175px"/></a>
 
 <h1 align="center">C++ Loader Base</h1>
 
