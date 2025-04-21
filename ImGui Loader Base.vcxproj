@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{82212CF7-C4EA-436C-ADD5-F7AD56122BF5}</ProjectGuid>
+    <RootNamespace>ImGui Loader Base</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <ProjectName>ImGui Loader base</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)build</OutDir>
+    <IntDir>$(SolutionDir)build/cacheLoader</IntDir>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)src\Dependecies\BlackBone\include\3rd_party;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)src\Dependecies\BlackBone\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(ProjectDir)src\Dependecies\BlackBone\lib;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)build</OutDir>
+    <IntDir>$(SolutionDir)build/cacheLoader</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)src\Dependecies\BlackBone\include;$(IncludePath)</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)src\Dependecies\BlackBone\include\3rd_party;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(ProjectDir)src\Dependecies\BlackBone\lib;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Dependecies\BlackBone\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalLibraryDirectories>$(SolutionDir)src\Dependecies\BlackBone\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)src\Dependecies\BlackBone\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)src\Dependecies\BlackBone\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\custom\ImGui_Custom.cpp" />
+    <ClCompile Include="src\Dependecies\ImGui\imgui.cpp" />
+    <ClCompile Include="src\Dependecies\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="src\Dependecies\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="src\Dependecies\ImGui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="src\Dependecies\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="src\Dependecies\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="src\Dependecies\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="src\app\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\custom\ImGui_Custom.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\audiodefs.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\comdecl.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D2D1.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D2D1Helper.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D2DBaseTypes.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D2Derr.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3D10.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3D10effect.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3d10misc.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3d10sdklayers.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3D10shader.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3D10_1.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3D10_1shader.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3D11.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3D11SDKLayers.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3D11Shader.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3d9.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3d9caps.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3d9types.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3Dcommon.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3Dcompiler.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3DCSX.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3DX10.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3dx10async.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3DX10core.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3DX10math.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3DX10mesh.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3DX10tex.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3DX11.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3DX11async.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3DX11core.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\D3DX11tex.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3dx9.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3dx9anim.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3dx9core.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3dx9effect.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3dx9math.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3dx9mesh.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3dx9shader.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3dx9shape.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3dx9tex.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\d3dx9xof.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\Dcommon.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\dinput.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\dinputd.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\dsconf.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\dsetup.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\dsound.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\DWrite.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\dxdiag.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\DxErr.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\dxfile.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\DXGI.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\DXGIFormat.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\DXGIType.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\dxsdkver.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\gameux.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\PIXPlugin.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\rmxfguid.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\rmxftmpl.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\rpcsal.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\X3DAudio.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\xact3.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\xact3d3.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\xact3wb.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\XAPO.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\XAPOBase.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\XAPOFX.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\XAudio2.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\XAudio2fx.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\XDSP.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\XInput.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\xma2defs.h" />
+    <ClInclude Include="src\Dependecies\DirectX\Include\xnamath.h" />
+    <ClInclude Include="src\includes.hpp" />
+    <ClInclude Include="src\Dependecies\ImGui\imconfig.h" />
+    <ClInclude Include="src\Dependecies\ImGui\imgui.h" />
+    <ClInclude Include="src\Dependecies\ImGui\imgui_impl_dx9.h" />
+    <ClInclude Include="src\Dependecies\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="src\Dependecies\ImGui\imgui_internal.h" />
+    <ClInclude Include="src\Dependecies\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="src\Dependecies\ImGui\imstb_textedit.h" />
+    <ClInclude Include="src\Dependecies\ImGui\imstb_truetype.h" />
+    <ClInclude Include="src\app\variable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Dependecies\DirectX\Include\D3DX10math.inl" />
+    <None Include="src\Dependecies\DirectX\Include\d3dx9math.inl" />
+    <None Include="src\Dependecies\DirectX\Include\D3DX_DXGIFormatConvert.inl" />
+    <None Include="src\Dependecies\DirectX\Include\xnamathconvert.inl" />
+    <None Include="src\Dependecies\DirectX\Include\xnamathmatrix.inl" />
+    <None Include="src\Dependecies\DirectX\Include\xnamathmisc.inl" />
+    <None Include="src\Dependecies\DirectX\Include\xnamathvector.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
